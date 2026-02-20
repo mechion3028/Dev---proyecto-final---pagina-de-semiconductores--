@@ -36,8 +36,8 @@
     <header>
       <h1>LOS SEMICONDUCTORES</h1>
       <p class="lead">La industria que mueve el mundo (y no tiene nada que ver con tractocamiones)</p>
-      <!-- REEMPLAZAR: ruta de la imagen del chip -->
-      <img class="hero-img" src="/assets/chip.jpg" alt="Oblea de silicio / chip integrado" />
+      <!-- ruta de la imagen de la oblea -->
+      <img class="hero-img" src="assets/oblea-silicio.webp" alt="Oblea de silicio" />
     </header>
 
     <nav aria-label="Navegación principal">
@@ -53,8 +53,12 @@
 
     <!-- INTRODUCCIÓN -->
     <section id="introduccion">
-      <h2>Introducción</h2>
-      <p><!-- REEMPLAZAR: Un párrafo corto que conecte con el lector. ej: "Vivimos en la era digital..." -->
+      <h2>Vivimos en la era digital. Cada vez que usamos un teléfono, una computadora, un automóvil moderno o incluso una consola de videojuegos, estamos utilizando tecnología que depende de algo casi invisible pero fundamental: los semiconductores.
+
+Aunque muchas personas no lo saben, los semiconductores son la base de los microprocesadores y de prácticamente todos los dispositivos electrónicos actuales. Sin ellos, no existirían la inteligencia artificial, el internet moderno ni los sistemas electrónicos avanzados que usamos todos los días.
+
+En esta página descubrirás qué es un semiconductor, cómo funciona y por qué es una de las industrias más importantes del mundo (y no, no tiene nada que ver con tractocamiones).: </h2>
+      <p><!-- introduccion aumentada" -->
       </p>
     </section>
 
@@ -63,7 +67,7 @@
       <div class="grid">
         <article>
           <h2>¿Qué es un semiconductor?</h2>
-          <p><!-- REEMPLAZAR: Explicación simple. Ej: "Un semiconductor tiene conductividad entre la de un metal y la de un aislante..." --></p>
+          <p><!-- "reemplazado que es un semiconductor" --></p>
 
           <h3>Conceptos clave</h3>
           <ul>
@@ -77,10 +81,10 @@
         </article>
 
         <aside class="card">
-          <h3>¿Para el profe?</h3>
-          <p>Breve nota técnica: el silicio es intrínseco —pero en la industria se usa dopado para controlar p/n y corriente.</p>
-          <!-- REEMPLAZAR: Pequeña imagen o diagrama -->
-          <img src="/assets/transistor-diagram.png" alt="Diagrama simplificado de un transistor" style="max-width:100%; margin-top:8px;" />
+          <h3>¿donde estan?</h3>
+          <p>El silicio es intrínseco —pero en la industria se usa dopado para controlar p/n y corriente.</p>
+          <!-- cambiada la imagen del diagrama-->
+          <img src="assets/transistor-pnp.webp" alt="Diagrama simplificado de un transistor" style="max-width:100%; margin-top:8px;" />
         </aside>
       </div>
     </section>
@@ -89,7 +93,7 @@
     <!-- ¿CÓMO FUNCIONA? -->
     <section id="como-funciona">
       <h2>¿Cómo funcionan?</h2>
-      <p><!-- REEMPLAZAR: Explicación del transistor, 0/1, compuertas lógicas, y cómo un chip agrupa millones de transistores. --></p>
+      <p><!-- reemplazado a una definicion mas simplificada --></p>
 
       <h3>Transistor (versión simple)</h3>
       <p>Explica en 2-3 líneas cómo un transistor actúa como interruptor eléctrico.</p>
@@ -98,6 +102,7 @@
       <p>Breve mención: AND, OR, NOT — la base de la computación digital.</p>
     </section>
 
+    
     <!-- IMPORTANCIA -->
     <section id="importancia">
       <h2>¿Por qué importan?</h2>
@@ -124,42 +129,45 @@
       </ol>
     </section>
 
-    
+    <!-- TABLA COMPARATIVA -->
+    <section id="comparativa">
+      <h2>Comparativa rápida</h2>
+      <table>
+        <thead>
+          <tr><th>Material</th><th>Conductividad</th><th>Ejemplo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Conductor</td><td>Alta</td><td>Cobre</td></tr>
+          <tr><td>Aislante</td><td>Muy baja</td><td>Vidrio</td></tr>
+          <tr><td>Semiconductor</td><td>Intermedia</td><td>Silicio</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MINI QUIZ -->
+    <section id="quiz" class="quiz">
+      <h2>Mini-Quiz (HTML puro)</h2>
+      <form id="quizForm">
         <div class="question">
-          <p><strong>1) ¿Un semiconductor es...?</strong></p>
+          <p><strong>1 ¿Un semiconductor es...?</strong></p>
           <label><input type="radio" name="q1" value="a"> Un tipo de metal pesado</label><br>
           <label><input type="radio" name="q1" value="b" data-correct="true"> Un material con conductividad intermedia</label><br>
           <label><input type="radio" name="q1" value="c"> Un tipo de motor</label>
         </div>
 
         <div class="question">
-          <p><strong>2) ¿Quiénes inventaron el transistor?</strong></p>
+          <p><strong>2 ¿Quiénes inventaron el transistor?</strong></p>
           <label><input type="radio" name="q2" value="a" data-correct="true"> Shockley, Bardeen y Brattain</label><br>
           <label><input type="radio" name="q2" value="b"> Jobs y Wozniak</label><br>
           <label><input type="radio" name="q2" value="c"> Einstein y Bohr</label>
         </div>
 
         <div class="question">
-          <p><strong>3) ¿Qué empresa fabrica la litografía avanzada?</strong></p>
+          <p><strong>3 ¿Qué empresa fabrica la litografía avanzada?</strong></p>
           <label><input type="radio" name="q3" value="a" data-correct="true"> ASML</label><br>
           <label><input type="radio" name="q3" value="b"> McDonald's</label><br>
           <label><input type="radio" name="q3" value="c"> Netflix</label>
-        </div>
 
-        <button type="submit">Enviar respuestas</button>
-      </form>
-
-      <div id="quizResult" class="card" style="display:none; margin-top:12px;"></div>
-    </section>
-
-    <!-- DATO CURIOSO -->
-    <section id="dato-curioso">
-      <h2>Dato curioso</h2>
-      <p><!-- REEMPLAZAR: Ej: "Un chip moderno puede tener más transistores que personas en la Tierra." --></p>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
       <h2>FAQ</h2>
       <details>
         <summary>¿Qué estudio necesito para trabajar en semiconductores?</summary>
@@ -173,7 +181,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>Proyecto: Introducción a los Semiconductores — Hecho por: <!-- REEMPLAZAR: Tu nombre y carrera --> Ignacio (Nacho)</p>
+      <p> Introduccion a los semiconductores — Hecho por: Jose Ignacio hernandez Villaseñor </p>
       <p><small>Fecha: <!-- REEMPLAZAR: fecha --> 2026-02-19</small></p>
     </footer>
 

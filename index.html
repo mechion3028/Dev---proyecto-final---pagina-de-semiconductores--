@@ -125,3 +125,96 @@
     </section>
 
     
+        <div class="question">
+          <p><strong>1) ¿Un semiconductor es...?</strong></p>
+          <label><input type="radio" name="q1" value="a"> Un tipo de metal pesado</label><br>
+          <label><input type="radio" name="q1" value="b" data-correct="true"> Un material con conductividad intermedia</label><br>
+          <label><input type="radio" name="q1" value="c"> Un tipo de motor</label>
+        </div>
+
+        <div class="question">
+          <p><strong>2) ¿Quiénes inventaron el transistor?</strong></p>
+          <label><input type="radio" name="q2" value="a" data-correct="true"> Shockley, Bardeen y Brattain</label><br>
+          <label><input type="radio" name="q2" value="b"> Jobs y Wozniak</label><br>
+          <label><input type="radio" name="q2" value="c"> Einstein y Bohr</label>
+        </div>
+
+        <div class="question">
+          <p><strong>3) ¿Qué empresa fabrica la litografía avanzada?</strong></p>
+          <label><input type="radio" name="q3" value="a" data-correct="true"> ASML</label><br>
+          <label><input type="radio" name="q3" value="b"> McDonald's</label><br>
+          <label><input type="radio" name="q3" value="c"> Netflix</label>
+        </div>
+
+        <button type="submit">Enviar respuestas</button>
+      </form>
+
+      <div id="quizResult" class="card" style="display:none; margin-top:12px;"></div>
+    </section>
+
+    <!-- DATO CURIOSO -->
+    <section id="dato-curioso">
+      <h2>Dato curioso</h2>
+      <p><!-- REEMPLAZAR: Ej: "Un chip moderno puede tener más transistores que personas en la Tierra." --></p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>¿Qué estudio necesito para trabajar en semiconductores?</summary>
+        <p>Ingeniería en electrónica, física, materiales y programación son caminos comunes.</p>
+      </details>
+      <details>
+        <summary>¿Qué es dopado?</summary>
+        <p>Agregar impurezas controladas para cambiar la conductividad del semiconductor.</p>
+      </details>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Proyecto: Introducción a los Semiconductores — Hecho por: <!-- REEMPLAZAR: Tu nombre y carrera --> Ignacio (Nacho)</p>
+      <p><small>Fecha: <!-- REEMPLAZAR: fecha --> 2026-02-19</small></p>
+    </footer>
+
+    <a class="back-top" href="#top" aria-label="Volver arriba"><button>↑ Top</button></a>
+  </div>
+
+  <script>
+    // Script mínimo para gestionar el quiz (sin librerías)
+    document.getElementById('quizForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const questions = ['q1','q2','q3'];
+      let correct = 0;
+      questions.forEach(qName => {
+        const choices = form.elements[qName];
+        if(!choices) return;
+        for(let i=0;i<choices.length;i++){
+          const input = choices[i];
+          if(input.checked && input.dataset.correct === 'true') correct++;
+        }
+      });
+      const resultDiv = document.getElementById('quizResult');
+      resultDiv.style.display = 'block';
+      resultDiv.innerHTML = `<strong>Obtuviste ${correct} de ${questions.length}.</strong>`;
+    });
+
+    // Smooth scroll para anclas internas
+    (function(){
+      if('scrollBehavior' in document.documentElement.style) return; // los navegadores modernos ya lo hacen
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(a=>{
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          const id = this.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if(el) el.scrollIntoView({ behavior:'smooth' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+
+

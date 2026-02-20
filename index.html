@@ -5,3 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Los Semiconductores - Introducción</title>
   
+   <style>
+    /* Estilos mínimos y agradables */
+    :root{ --maxw:1000px; --accent:#0b66ff; --muted:#666; }
+    html,body{ margin:0; padding:0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; }
+    .container{ max-width:var(--maxw); margin:32px auto; padding:0 16px; }
+    header{ text-align:center; padding:24px 0 8px; }
+    header h1{ margin:0; font-size:2rem; }
+    header p{ margin:6px 0 12px; color:var(--muted); }
+    .hero-img{ display:block; margin:12px auto; max-width:320px; height:auto; border-radius:8px; }
+    nav{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin:16px 0; }
+    nav a{ text-decoration:none; color:var(--accent); font-weight:600; }
+    section{ padding:18px 0; border-top:1px solid #eee; }
+    h2{ margin:4px 0 12px; }
+    p.lead{ color:var(--muted); }
+    .grid{ display:grid; grid-template-columns: 1fr; gap:18px; }
+    @media(min-width:760px){ .grid{ grid-template-columns: 1fr 320px; } }
+    .card{ background:#fafafa; padding:12px; border-radius:8px; box-shadow: 0 1px 4px rgba(0,0,0,0.03); }
+    table{ width:100%; border-collapse:collapse; }
+    table th, table td{ text-align:left; padding:8px; border-bottom:1px solid #eee; }
+    ol.timeline{ padding-left:18px; }
+    .quiz .question{ margin-bottom:12px; }
+    button{ background:var(--accent); color:white; padding:8px 12px; border:0; border-radius:6px; cursor:pointer; }
+    footer{ text-align:center; color:var(--muted); margin:28px 0; font-size:0.9rem; }
+    .back-top{ position:fixed; right:20px; bottom:20px; display:inline-block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LOS SEMICONDUCTORES</h1>
+      <p class="lead">La industria que mueve el mundo (y no tiene nada que ver con tractocamiones)</p>
+      <!-- REEMPLAZAR: ruta de la imagen del chip -->
+      <img class="hero-img" src="/assets/chip.jpg" alt="Oblea de silicio / chip integrado" />
+    </header>
+
+    <nav aria-label="Navegación principal">
+      <a href="#introduccion">Introducción</a>
+      <a href="#que-es">¿Qué es?</a>
+      <a href="#como-funciona">¿Cómo funciona?</a>
+      <a href="#importancia">¿Por qué importa?</a>
+      <a href="#historia">Historia</a>
+      <a href="#comparativa">Comparativa</a>
+      <a href="#quiz">Mini-Quiz</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <p><!-- REEMPLAZAR: Un párrafo corto que conecte con el lector. ej: "Vivimos en la era digital..." -->
+      </p>
+    </section>
+
+    <!-- ¿QUÉ ES UN SEMICONDUCTOR? -->
+    <section id="que-es">
+      <div class="grid">
+        <article>
+          <h2>¿Qué es un semiconductor?</h2>
+          <p><!-- REEMPLAZAR: Explicación simple. Ej: "Un semiconductor tiene conductividad entre la de un metal y la de un aislante..." --></p>
+
+          <h3>Conceptos clave</h3>
+          <ul>
+            <li><strong>Conductor:</strong> material donde los electrones se mueven con facilidad.</li>
+            <li><strong>Aislante:</strong> material donde el flujo de electrones es extremadamente bajo.</li>
+            <li><strong>Semiconductor:</strong> punto intermedio; su conductividad puede cambiar con dopado, temperatura o luz.</li>
+            <li><strong>Silicio:</strong> el semiconductor más usado en la industria. (Nota: en la práctica se suele dopar para controlar su comportamiento)</li>
+          </ul>
+
+          <p class="card"><strong>Dato histórico:</strong> En 1947, en Bell Labs, se inventó el transistor (Shockley, Bardeen y Brattain).</p>
+        </article>
+
+        <aside class="card">
+          <h3>¿Para el profe?</h3>
+          <p>Breve nota técnica: el silicio es intrínseco —pero en la industria se usa dopado para controlar p/n y corriente.</p>
+          <!-- REEMPLAZAR: Pequeña imagen o diagrama -->
+          <img src="/assets/transistor-diagram.png" alt="Diagrama simplificado de un transistor" style="max-width:100%; margin-top:8px;" />
+        </aside>
+      </div>
+    </section>
+    <!-- prueba -->
